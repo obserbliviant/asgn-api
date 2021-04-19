@@ -9,7 +9,7 @@ var assignmentSchema = mongoose.Schema({
     dueDate: Date
 });
 
-var Assignment = module.exports = mongoose.model("assignment", assignmentSchema);
+var Assignment = module.exports = mongoose.model("assignments", assignmentSchema);
 module.exports.get = function (callback, limit) {
-    Assignment.find(callback.limit(limit));
+    Assignment.find(callback).limit(limit);
 }
